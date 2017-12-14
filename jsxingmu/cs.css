@@ -1,0 +1,616 @@
+
+		body,p,ul,li{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		.box1{
+			width:100%;
+			height: 30px;
+			line-height: 30px;
+			background: #eeeeee;}
+		.box1-a{
+			width: 225px;
+			height: 30px;
+			float: left;
+			margin-left: 3%;
+			background: url('images/i1.jpg') no-repeat 0 10px;
+			padding-left:20px;
+		}
+		.box1-a>p{
+			float: left;
+			margin-right: 10px;
+			font-size: 12px;
+			color: #999999;
+		}
+		.box1-a>.box1-a1{
+			color: #64a131;
+		}	
+		.box1-b{
+			width: 550px;
+			height: 30px;
+			float: right;
+			color: #999999;
+		}
+		.box1-b>a{
+			font-size: 12px;
+			text-decoration: none;
+			float: left;
+			color: #999999;
+		}
+		.box1-b>p{
+			float: left;
+			margin-left: 13px;
+			margin-right: 8px;
+		}
+		.box1-b>ul>li{
+			list-style: none;
+			float: left;
+			margin-left: 16px;
+			font-size: 12px;
+		}
+		.box1-b>ul>li>img{
+			margin-right: 5px;
+		}
+		.box1-b>ul>.box1-b1{
+			height: 14px;
+			margin-top:8px;
+			border-left: 1px solid #999999; 
+		}
+		.box2{
+			width: 100%;
+			height: 120px;
+			margin: 0 auto;
+		}
+		.box2>p{
+			float: left;
+		}
+		.box2>p>img{
+			width: 300px;
+			height: 73px;
+			margin-top: 23px;
+			margin-left: 5px;
+		}
+		.box2>ul{
+			float: left;
+			margin-left: 45px;
+			margin-top: 40px;
+		}
+		.box2>ul>li{
+			float: left;
+			height: 40px;
+			padding-left:3px;
+			padding-right: 3px;
+			border-left: 1px solid #eeeeee; 
+		}
+		.box2>ul>.box2-a{
+			border-left: 0; 
+		}
+		.box2>ul>li>a{
+			display: block;
+			padding-left:22px;
+			padding-right: 22px;
+			font-size: 12px;
+			color: #b29999;
+			text-align: center;
+			height: 77px;
+			
+		}
+		.box2>ul>li>a:hover{
+			border-bottom: 2px solid #64a131;
+			color: #64a131;
+		}
+		.box2-b{
+			width: 240px;
+			height: 50px;
+			margin-top: 30px;
+			float: right;
+			position: relative;
+			margin-right: 15px;
+			background: url(images/icon1.jpg) no-repeat 195px 3px;
+		}
+		.box2-b>span{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			right: 0;
+		}
+		.box2-b>span>a{
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		.box2-b>input{
+			width: 140px;
+			height: 28px;
+			border: 0;
+			border-bottom: 1px solid #999999;
+			outline: none;
+			float: left;
+		}
+		.box2-b>a{
+			display: block;
+			float: left;
+			width: 20px;
+			height: 30px;
+			background:url(images/icon2.jpg)no-repeat 0 10px;
+		}
+		.box2-b>div{
+			float: left;
+		}
+		.box2-b>div>span{
+			font-size: 12px;
+			color: #999999;
+		}
+		#box3{
+			position: relative;
+			width: 100%;
+			height: 400px;
+			overflow: hidden;
+		}
+		#box3>ul>li>a>img{
+			width: 1300px;
+			height: 400px;
+			display: block;
+			float: left;
+		}
+		#box3>ul{
+			position: absolute;
+			overflow: hidden;
+		}
+		#box3>div{
+			width: 200px;
+			height: 50px;
+			position: absolute;
+			left: 50%;
+			margin-left: -100px;
+			bottom: 30px;
+			z-index: 1;
+		}
+		#box3>div>p{
+			width: 50px;
+			height: 50px;
+			float: left;
+			border: 1px solid #64a131;
+			border-radius: 30px;
+			margin-left: 30px;
+		}
+		#box3>div>.but{
+			background:#64a131; 
+		}
+		#box4{width: 100%;
+			height: 150px;
+			}
+		#box4>a>img{
+			float: left;
+			width: 23%;
+			margin-left: 1%;
+			margin-right: 1%;
+		}
+		#box5{
+			width: 99%;
+			margin: 0 auto;
+			height: 65px;
+			margin-top: 50px;
+			border-top: 1px solid #000;
+		}
+		#box5>p{
+			float: left;
+			font-size: 20px;
+			color: #676767;
+			line-height: 65px;
+		}
+		#box5>a{
+			float: right;
+			font-size: 12px;
+			color: #000;
+			line-height: 65px;
+
+		}
+		#box6{overflow: hidden;}
+		#box6>div{
+			width: 18%;
+			height: 310px;
+			float: left;
+			margin-left: 1%;
+			margin-right: 1%;
+			margin-bottom: 5px;
+			margin-top: 5px;
+		}
+		#box6>div>a{
+			display: block;
+			height: 230px;
+			width: 100%;
+			overflow: hidden;
+		}
+		#box6>div>a>img{
+			width: 100%;
+			height: 100%;
+		}
+		#box6>div>p{
+			font-size: 12px;
+			color: #555555;
+			line-height: 35px;
+		}
+		#box6>div>span{
+			font-size: 12px;
+			color: #999999;
+		}
+		#box6>div>i{
+			display: block;
+			height: 35px;
+			width: 35px;
+			float: right;
+			}	
+		#box6>div>i>a{
+			display: block;
+			height: 35px;
+			width: 35px;
+			float: right;
+			background: url(images/icons.png) no-repeat -514px -290px;}
+		#box7{overflow: hidden;}
+		#box7>div{
+			width: 18%;
+			height: 310px;
+			float: left;
+			margin-left: 1%;
+			margin-right: 1%;
+		}
+		#box7>div>a{
+			display: block;
+			height: 230px;
+			width: 100%;
+			overflow: hidden;
+		}
+		#box7>div>a>img{
+			width: 100%;
+			height: 100%;
+		}
+		#box7>div>p{
+			font-size: 12px;
+			color: #555555;
+			line-height: 35px;
+		}
+		#box7>div>span{
+			font-size: 12px;
+			color: #999999;
+		}
+		#box7>div>i{
+			display: block;
+			height: 35px;
+			width: 35px;
+			float: right;
+			}	
+		#box7>div>i>a{
+			display: block;
+			height: 35px;
+			width: 35px;
+			float: right;
+			background: url(images/icons.png) no-repeat -514px -290px;}
+		#box8{overflow: hidden;}
+		#box8>div{
+			width: 18%;
+			height: 310px;
+			float: left;
+			margin-left: 1%;
+			margin-right: 1%;
+		}
+		#box8>div>a{
+			display: block;
+			height: 230px;
+			width: 100%;
+			overflow: hidden;
+		}
+		#box8>div>a>img{
+			width: 100%;
+			height: 100%;
+		}
+		#box8>div>p{
+			font-size: 12px;
+			color: #555555;
+			line-height: 35px;
+		}
+		#box8>div>span{
+			font-size: 12px;
+			color: #999999;
+		}
+		#box8>div>i{
+			display: block;
+			height: 35px;
+			width: 35px;
+			float: right;
+			}	
+		#box8>div>i>a{
+			display: block;
+			height: 35px;
+			width: 35px;
+			float: right;
+			background: url(images/icons.png) no-repeat -514px -290px;}
+		#box9{overflow: hidden;}
+		#box9>div{
+			width: 18%;
+			height: 310px;
+			float: left;
+			margin-left: 1%;
+			margin-right: 1%;
+		}
+		#box9>div>a{
+			display: block;
+			height: 230px;
+			width: 100%;
+			overflow: hidden;
+		}
+		#box9>div>a>img{
+			width: 100%;
+			height: 100%;
+		}
+		#box9>div>p{
+			font-size: 12px;
+			color: #555555;
+			line-height: 35px;
+		}
+		#box9>div>span{
+			font-size: 12px;
+			color: #999999;
+		}
+		#box9>div>i{
+			display: block;
+			height: 35px;
+			width: 35px;
+			float: right;
+			}	
+		#box9>div>i>a{
+			display: block;
+			height: 35px;
+			width: 35px;
+			float: right;
+			background: url(images/icons.png) no-repeat -514px -290px;}
+		#box10{
+			border-top: 1px solid #ccc;
+			padding-top:30px;
+			overflow: hidden;
+		}
+		#box10>#box10-c>a{
+			font-size: 12px;
+			line-height: 50px;
+			color: #64a131;
+		}
+		#box10>#box10-a{
+			float: left;
+			width: 400px;
+			height: 500px;
+		}
+		#box10>#box10-a>div{
+			width:400px;
+			height: 400px;
+			margin-bottom: 5px;
+		}
+		#box10>#box10-a>div>img{
+			width: 100%;
+			height: 100%;
+		}
+		#box10>#box10-a>p{
+			float: left;
+			width: 70px;
+			height: 80px;
+			margin-right: 3px;
+		}
+		#box10>#box10-a>p>img{
+			width: 100%;
+			height: 100%;
+		}
+		#box10>#box10-b{
+			width: 400px;
+			float: left;
+			margin-left: 20px;
+		}
+		#box10>#box10-b>p{
+			margin-bottom: 30px;
+			font-size: 20px;
+		}
+		#box10>#box10-b>p>span{
+			font-size: 15px;
+			margin-right: 30px;
+		}
+		#box10>#box10-b>div>input{
+			width: 30px;
+		}
+		#box10>#box10-b>div>span{
+			margin-right: 30px;
+		}
+		#box10>#box10-b>span{
+			margin-top: 50px;
+			overflow: hidden;
+			display: block;
+		}
+		#box10>#box10-b>span>:first-child{
+			display: block;
+			float: left;
+			width: 150px;
+			height: 50px;
+			color:#64a131;
+			border: 1px solid #64a131;
+			margin-right: 30px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 4px;
+		}
+		#box10>#box10-b>span>:last-child{
+			display: block;
+			float: left;
+			width: 150px;
+			height: 50px;
+			color:#fff;
+			background:#64a131;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 4px;
+		}
+		.box11{
+			width: 100%;
+			font-size: 14px;
+			line-height: 40px;
+			border-bottom: 1px solid #999;
+		}
+		.box11>span{
+			margin-right: 10px;
+
+		}
+		.box11>.box11a{
+			color: #999999;
+		}
+		.box11>.box11b{
+			color: #fff;
+			padding: 3px 9px;
+			background: #64a131;
+		}
+		.box11>span>a{
+			color: #555555;
+		}
+		.box11>input{
+			width: 50px;
+
+		}
+		.box11s{
+			height: 30px;
+			border-top: 3px solid #cccccc;
+		}
+		.box12{
+			width: 1000px;
+			margin: 50px auto 0;
+			overflow: hidden;
+			background: url(images/icons.png) no-repeat -525px -330px; 
+		}
+		.box12>p{
+			float: left;
+			color: #555555;
+		    margin-left: 25px;
+		    line-height: 27px;
+		    font-size: 20px;
+		}
+		.box12>a{
+			color: #64a131;
+    		padding-top: 10px;
+    		font-size: 14px;
+    		float: right;
+		}
+		.box13{
+			width: 1000px;
+			height: 50px;
+			margin: 0 auto ;
+			overflow: hidden;
+			border: 1px solid #ccc;
+			background: #f1f1f1;
+		}
+		.box13>span{
+			float: left;
+			font-size: 14px;
+			color: #999;
+			line-height: 50px;
+			margin-left: 80px;
+		}
+		.box13>.box13a{
+			margin-left: 200px;
+			margin-right: 100px;
+		}
+		#box14{
+			width: 1000px;
+			margin: 0 auto;
+			overflow: hidden;
+			border: 1px solid #ccc;
+			border-top: 0;
+		}
+		#box14>div{
+			width: 110px;
+			height: 110px;
+			float: left;
+			margin-left: 50px;
+		}
+		#box14>div>a>img{
+			width: 100%;
+			height: 100%;
+		}
+		#box14>.box14a{
+			width: 160px;
+			margin-left: 20px;
+		}
+		#box14>p{
+			float: left;
+			font-size: 14px;
+			color: #999;
+			line-height: 50px;
+			margin-left: 50px;
+		}
+		#box14>p>input{
+			width: 50px;
+		}
+		#box14>span{
+			float: left;
+			font-size: 14px;
+			color: #999;
+			line-height: 50px;
+			margin-left: 80px;
+		}
+		#ts{
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.1);
+			position: absolute;
+			top: 0;
+			display: none;
+		}
+		#ts>div{
+			position: absolute;
+			width: 300px;
+			height: 200px;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			margin:auto; 
+				background: #fff;
+		}
+		#ts>div>p{
+			font-size: 20px;
+			color: #64a131;
+			text-align: center;
+			line-height: 40px;
+
+		}
+		#ts>div>a{
+			float: left;
+			display: block;
+			width: 100px;
+			height: 50px;
+			margin-top: 70px;
+			font-size: 14px;
+			border: 1px solid #64a131;
+			line-height: 50px;
+			text-align: center;
+			color: #64a131;
+			margin-right: 20px;
+			margin-left: 20px;
+		}
+		#ts>div>a:last-child{
+			float: right;
+		}
+		#ts>div>span{
+			display: block;
+			height: 30px;
+			background: #ccc;
+		}
+		#ts>div>span>a{
+			float: right;
+			font-size: 20px;
+			margin-right: 10px;
+		}
+		#footer{
+			width: 100%;
+			height: 430px;
+			border-top: 1px solid #64a131;
+		}

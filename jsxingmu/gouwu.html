@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="cs.css">
+</head>
+<body>
+	<div class="box1">
+		<div class="box1-a">
+			<p>上海</p>
+			<p><img src="images/i2.jpg"></p>
+			<p>满百包邮（环交内）</p>
+			<p class="box1-a1">星夜达</p>
+		</div>
+		<div class="box1-b">
+			<a href="login.html">[登陆]</a>
+			<p>，</p>
+			<a href="register.html">[注册有惊喜]</a>
+			<ul>
+				<li class="box1-b1"></li>
+				<li>果园广告</li>
+				<li class="box1-b1"></li>
+				<li>卷卡兑换</li>
+				<li class="box1-b1"></li>
+				<li><img src="images/i3.jpg"/>手机果园</li>
+				<li class="box1-b1"></li>
+				<li><img src="images/i4.jpg"/>400-720-0770</li>
+			</ul>
+
+		</div>		
+	</div>
+		<!-- logo行 -->
+	<div class="box2">
+		<p><a href="ss.html"><img src="images/logo.png"></a></p>
+		<ul>
+			<li class="box2-a">
+			<a href="ss.html">
+				<p>首页</p>
+				<p>Home</p>
+			</a>
+			</li>
+			<li>
+			<a href="shuigou.html">
+				<p>鲜果</p>
+				<p>Fruit</p>
+			</a>
+			</li>
+			<li>
+			<a href="shengxian.html">
+				<p>生鲜</p>
+				<p>Fresh</p>
+			</a>
+			</li>
+			<li>
+			<a href="##">
+				<p>礼品</p>
+				<p>Gift</p>
+			</a>
+			</li>
+			<li>
+			<a href="login.html">
+				<p>会员中心</p>
+				<p>VIP Club</p>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div class="box12">
+		<p>我的购物车</p>
+		<a href="">继续逛逛></a>
+	</div>
+	<div class="box13">
+		<span class="box13a">商品</span>
+		<span>规格</span>
+		<span>单价(元)</span>
+		<span>数量</span>
+		<span>总价(元)</span>
+		<span>操作</span>
+	</div>
+	<div id="box15"></div>
+<!-- 	<div id="box14">
+		<div><a href=""><img src="" alt=""></a></div>
+		<span class="box14a">商品</span>
+		<span>规格</span>
+		<span>单价(元)</span>
+		<p>
+			<button>-</button>
+			<input type="text">
+			<button>+</button>
+		</p>
+		<p>总价(元)</p>
+		<p>操作</p>
+	</div> -->
+	<div id="footer">
+		<img src="images/footer.jpg" alt="">
+	</div>
+</body>
+</html>
+<script src="ajax.js"></script>
+<script src="pool.js"></script>
+<script>
+var url=location.href
+var num=url.split("?")
+var box15=document.getElementById("box15")
+if(num[3]){
+	if(num[3]=="d"){
+		ajax("get","stra.json","",function(obj){
+				var str=""
+				for(var i=0;i<obj.length;i++){
+					if(num[1]==obj[i].id){
+						var div=document.createElement("div")
+						div.id="box14"
+						div.innerHTML='<div><a href="##"><img src='+obj[i].img+' alt=""></a></div><span class="box14a">'+obj[i].name+'</span><span>'+obj[i].num+'</span><span>'+obj[i].money+'元</span><p><button>-</button><input type="text" value='+num[2]+'><button>+</button></p><p>'+num[2]*parseFloat(obj[i].money)+'元</p><p><a href="##">删除</a></p>'
+						box15.appendChild(div)
+					}
+
+				}
+					
+			
+				
+		})
+	}
+		if(num[3]=="e"){
+		ajax("get","strb.json","",function(obj){
+				var str=""
+				for(var i=0;i<obj.length;i++){
+					if(num[1]==obj[i].id){
+						var div=document.createElement("div")
+						div.id="box14"
+						div.innerHTML='<div><a href="##"><img src='+obj[i].img+' alt=""></a></div><span class="box14a">'+obj[i].name+'</span><span>'+obj[i].num+'</span><span>'+obj[i].money+'元</span><p><button>-</button><input type="text" value='+num[2]+'><button>+</button></p><p>'+num[2]*parseFloat(obj[i].money)+'元</p><p><a href="##">删除</a></p>'
+						box15.appendChild(div)
+					}
+				}
+		})
+	}
+
+		if(num[3]=="f"){
+		ajax("get","strc.json","",function(obj){
+				var str=""
+				for(var i=0;i<obj.length;i++){
+					if(num[1]==obj[i].id){
+						var div=document.createElement("div")
+						div.id="box14"
+						div.innerHTML='<div><a href="##"><img src='+obj[i].img+' alt=""></a></div><span class="box14a">'+obj[i].name+'</span><span>'+obj[i].num+'</span><span>'+obj[i].money+'元</span><p><button>-</button><input type="text" value='+num[2]+'><button>+</button></p><p>'+num[2]*parseFloat(obj[i].money)+'元</p><p><a href="##">删除</a></p>'
+						box15.appendChild(div)
+					}
+				}
+		})
+	}
+
+		if(num[3]=="g"){
+		ajax("get","strd.json","",function(obj){
+				var str=""
+				for(var i=0;i<obj.length;i++){
+					if(num[1]==obj[i].id){
+						var div=document.createElement("div")
+						div.id="box14"
+						div.innerHTML='<div><a href="##"><img src='+obj[i].img+' alt=""></a></div><span class="box14a">'+obj[i].name+'</span><span>'+obj[i].num+'</span><span>'+obj[i].money+'元</span><p><button>-</button><input type="text" value='+num[2]+'><button>+</button></p><p>'+num[2]*parseFloat(obj[i].money)+'元</p><p><a href="##">删除</a></p>'
+						box15.appendChild(div)
+					}
+				}
+
+		})
+	}
+
+}else{
+		ajax("get","ste.json","",function(obj){
+				var str=""
+				for(var i=0;i<obj.length;i++){
+					if(num[1]==obj[i].id){
+						var div=document.createElement("div")
+						div.id="box14"
+						div.innerHTML='<div><a href="##"><img src='+obj[i].img+' alt=""></a></div><span class="box14a">'+obj[i].name+'</span><span>'+obj[i].num+'</span><span>'+obj[i].money+'元</span><p><button>-</button><input type="text" value='+num[2]+'><button>+</button></p><p>'+num[2]*parseFloat(obj[i].money)+'元</p><p><a href="##">删除</a></p>'
+						box15.appendChild(div)
+					}
+				}
+
+		})
+}
+
+		//cookie
+			var cookie = document.cookie
+			console.log(cookie)
+// 		if(getCookie('init')){
+// 	//取出cookie里面的值
+// 	var shoop =JSON.parse(getCookie('init'))
+// 	//用cookie里面的值跟obj里面的id进行比较 如果相等那么就有这个数据，然后做字符串拼接 
+// 	ajax("get","strd.json","",function(obj){
+// 			for(var i in shoop){
+// 		for(var j in obj){
+// 			if(i==obj[j].id){
+// 				var div=document.createElement("div")
+// 					div.id="box14"
+// 					div.innerHTML='<div><a href="##" id='+i+'><img src='+obj[j].img+' alt=""></a></div><span class="box14a">'+obj[j].name+'</span><span>'+obj[j].num+'</span><span>'+obj[j].money+'元</span><p><button>-</button><input type="text" value='+shoop[i]+'><button>+</button></p><p>'+shoop[i]*parseFloat(obj[j].money)+'元</p><p><a href="##">删除</a></p>'
+// 					box15.appendChild(div)
+// 			}
+// 			}
+// 							//删除
+// 				var box14=document.querySelectorAll("#box14")
+// 				var a=[]
+// 				for(var i=0;i<box14.length;i++){
+// 				box14[i].onclick = function(e){
+// 					var e=e||event;
+// 					var target=e.target||e.srcElement
+// 					if(target.tagName=="A"){
+// 						this.remove()
+// 						console.log(this.firstElementChild.firstElementChild.id)
+// 						for(var i in shoop){
+// 							if(i==this.firstElementChild.firstElementChild.id){
+								
+// 								setCookie("init",JSON.stringify(shoop),7)
+// 							}
+							
+// 						}
+// 					}
+// 				}
+// 			}
+// }
+		
+// 	})
+// }
+			var phs=cookie.split(";")
+			var poss=[]
+			var boss=[]
+			var coss=[]
+			var doss=[]
+			var all=[]
+			for(var i=0;i<phs.length;i++){
+				if(phs[i].indexOf("d")!=-1){
+					poss.push(phs[i])
+					}
+				if(phs[i].indexOf("e")!=-1){
+					boss.push(phs[i])
+					}
+				if(phs[i].indexOf("f")!=-1){
+					coss.push(phs[i])
+					}
+				if(phs[i].indexOf("g")!=-1){
+					doss.push(phs[i])
+					}
+				if(phs[i].indexOf("d")==-1&&phs[i].indexOf("e")==-1&&phs[i].indexOf("f")==-1&&phs[i].indexOf("g")==-1){
+						all.push(phs[i])
+				}	
+			}
+					ajax("get","stra.json","",function(obj){
+						for(var j=0;j<poss.length;j++){
+							for(var i=0;i<obj.length;i++){
+							if(parseInt(poss[j].split("=")[0])==parseInt(obj[i].id)){
+							var div=document.createElement("div")
+							div.id="box14"
+							div.innerHTML='<div><a href="##" id='+poss[j].split("=")[0]+'><img src='+obj[i].img+' alt=""></a></div><span class="box14a">'+obj[i].name+'</span><span>'+obj[i].num+'</span><span>'+obj[i].money+'元</span><p><button>-</button><input type="text" value='+parseInt(poss[j].split("=")[1].split(":")[1])+'><button>+</button></p><p>'+parseInt(poss[j].split("=")[1].split(":")[1])*parseFloat(obj[i].money)+'元</p><p><a href="##">删除</a></p>'
+							box15.appendChild(div)
+							}
+							}
+						}
+					})
+					ajax("get","strb.json","",function(obj){
+						for(var j=0;j<boss.length;j++){
+							for(var i=0;i<obj.length;i++){
+							if(parseInt(boss[j].split("=")[0])==parseInt(obj[i].id)){
+							var div=document.createElement("div")
+							div.id="box14"
+							div.innerHTML='<div><a href="##" id='+boss[j].split("=")[0]+'><img src='+obj[i].img+' alt=""></a></div><span class="box14a">'+obj[i].name+'</span><span>'+obj[i].num+'</span><span>'+obj[i].money+'元</span><p><button>-</button><input type="text" value='+parseInt(boss[j].split("=")[1].split(":")[1])+'><button>+</button></p><p>'+parseInt(boss[j].split("=")[1].split(":")[1])*parseFloat(obj[i].money)+'元</p><p><a href="##">删除</a></p>'
+								box15.appendChild(div)
+
+							}
+							}
+						}
+
+					})
+					ajax("get","strc.json","",function(obj){
+						for(var j=0;j<coss.length;j++){
+							for(var i=0;i<obj.length;i++){
+							if(parseInt(coss[j].split("=")[0])==parseInt(obj[i].id)){
+							var div=document.createElement("div")
+							div.id="box14"
+							div.innerHTML='<div><a href="##" id='+coss[j].split("=")[0]+'><img src='+obj[i].img+' alt=""></a></div><span class="box14a">'+obj[i].name+'</span><span>'+obj[i].num+'</span><span>'+obj[i].money+'元</span><p><button>-</button><input type="text" value='+parseInt(coss[j].split("=")[1].split(":")[1])+'><button>+</button></p><p>'+parseInt(coss[j].split("=")[1].split(":")[1])*parseFloat(obj[i].money)+'元</p><p><a href="##">删除</a></p>'
+							box15.appendChild(div)
+							}
+							}
+						}
+			
+					})
+					ajax("get","strd.json","",function(obj){
+						for(var j=0;j<doss.length;j++){
+							for(var i=0;i<obj.length;i++){
+							if(parseInt(doss[j].split("=")[0])==parseInt(obj[i].id)){
+							var div=document.createElement("div")
+							div.id="box14"
+							div.innerHTML='<div><a href="##" id='+doss[j].split("=")[0]+'><img src='+obj[i].img+' alt=""></a></div><span class="box14a">'+obj[i].name+'</span><span>'+obj[i].num+'</span><span>'+obj[i].money+'元</span><p><button>-</button><input type="text" value='+parseInt(doss[j].split("=")[1].split(":")[1])+'><button>+</button></p><p>'+parseInt(doss[j].split("=")[1].split(":")[1])*parseFloat(obj[i].money)+'元</p><p><a href="##">删除</a></p>'
+							box15.appendChild(div)
+							}
+							}
+						}
+					})
+					ajax("get","ste.json","",function(obj){
+						for(var j=0;j<all.length;j++){
+							for(var i=0;i<obj.length;i++){
+							if(parseInt(all[j].split("=")[0])==parseInt(obj[i].id)){
+							var div=document.createElement("div")
+							div.id="box14"
+							div.innerHTML='<div><a href="##" id='+all[j].split("=")[0]+'><img src='+obj[i].img+' alt=""></a></div><span class="box14a">'+obj[i].name+'</span><span>'+obj[i].num+'</span><span>'+obj[i].money+'元</span><p><button>-</button><input type="text" value='+parseInt(all[j].split("=")[1].split(":")[1])+'><button>+</button></p><p>'+parseInt(all[j].split("=")[1].split(":")[1])*parseFloat(obj[i].money)+'元</p><p><a href="##">删除</a></p>'
+							box15.appendChild(div)
+							}
+							}
+						}
+			
+
+								//删除
+				var box14=document.querySelectorAll("#box14")
+				for(var i=0;i<box14.length;i++){
+								box14[i].onclick = function(e){
+									var e=e||event;
+									var target=e.target||e.srcElement
+									if(target.tagName=="A"){
+										this.remove()
+										console.log(this.firstElementChild.firstElementChild.id)
+										setCookie(this.firstElementChild.firstElementChild.id,"",-1)
+									}
+					//商品加减
+					if(target.tagName=="BUTTON"){
+					var dj=this.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling
+					var zj=this.lastElementChild.previousElementSibling
+					var val=this.lastElementChild.previousElementSibling.previousElementSibling.lastElementChild.previousElementSibling
+					var but=this.lastElementChild.previousElementSibling.previousElementSibling.children
+					if(target.innerHTML=="-"){
+						var a=parseInt(val.value)
+						a--
+						if(a<=1){
+							a=1
+						}
+						val.value=a
+						zj.innerHTML=parseFloat(dj.innerHTML)*a+"元"
+					}
+					if(target.innerHTML=="+"){
+						var a=parseInt(val.value)
+						a++
+						val.value=a
+						zj.innerHTML=parseFloat(dj.innerHTML)*a+"元"
+						
+					}
+					}
+								}
+							}
+					})
+
+</script>

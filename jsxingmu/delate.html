@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<link rel="stylesheet" href="cs.css">
+<body>
+<body>
+<!-- 登陆注册 -->
+	<div class="box1">
+		<div class="box1-a">
+			<p>上海</p>
+			<p><img src="images/i2.jpg"></p>
+			<p>满百包邮（环交内）</p>
+			<p class="box1-a1">星夜达</p>
+		</div>
+		<div class="box1-b">
+			<a href="login.html">[登陆]</a>
+			<p>，</p>
+			<a href="register.html">[注册有惊喜]</a>
+			<ul>
+				<li class="box1-b1"></li>
+				<li>果园广告</li>
+				<li class="box1-b1"></li>
+				<li>卷卡兑换</li>
+				<li class="box1-b1"></li>
+				<li><img src="images/i3.jpg"/>手机果园</li>
+				<li class="box1-b1"></li>
+				<li><img src="images/i4.jpg"/>400-720-0770</li>
+			</ul>
+
+		</div>		
+	</div>
+	<!-- logo行 -->
+	<div class="box2">
+		<p><a href="ss.html"><img src="images/logo.png"></a></p>
+		<ul>
+			<li class="box2-a">
+			<a href="ss.html">
+				<p>首页</p>
+				<p>Home</p>
+			</a>
+			</li>
+			<li>
+			<a href="shuigou.html">
+				<p>鲜果</p>
+				<p>Fruit</p>
+			</a>
+			</li>
+			<li>
+			<a href="shengxian.html">
+				<p>生鲜</p>
+				<p>Fresh</p>
+			</a>
+			</li>
+			<li>
+			<a href="##">
+				<p>礼品</p>
+				<p>Gift</p>
+			</a>
+			</li>
+			<li>
+			<a href="login.html">
+				<p>会员中心</p>
+				<p>VIP Club</p>
+			</a>
+			</li>
+		</ul>
+		<div class="box2-b">
+			<input type="text" placeholder="奇异果">
+			<a href="##"></a>
+			<span><a href="gouwu.html"></a></span>
+			<div>
+			<span>热门：</span>
+			<span></span>
+			</div>
+		</div>
+	</div>
+	<div id="box10">
+		<!-- <div id="box10-c">
+			<a href="">首页</a>>
+			<a href="">ss</a>>
+			<a href="">sss</a>
+		</div>
+		<div id="box10-a">
+			<div><img src=""></div>
+			<p><img src=""></p>
+			<p><img src=""></p>
+			<p><img src=""></p>
+			<p><img src=""></p>
+		</div>
+		<div id="box10-b">
+			<p>www</p>
+			<p>wwwss</p>
+			<p><span>果园价</span><span></span></p>
+			<p><span>规格</span><span></span></p>
+			<div>
+			<span>数量</span>
+			<button>-</button>
+			<input type="text">
+			<button>+</button>
+			</div>
+			<span>
+			<a href="##">立即购买</a>
+			<a href="##">加入购物车</a>
+			</span>
+			
+		</div> -->
+	</div>
+	<div id="ts">
+		<div>
+		<span><a href="##">X</a></span>
+		<p>加入购物车成功!</p>
+		<a href="##">确定</a>
+		<a href="gouwu.html">去结算</a>
+
+		</div>
+
+	</div>
+	<div id="footer">
+		<img src="images/footer.jpg" alt="">
+	</div>
+</body>
+</html>
+<script src="pool.js"></script>
+<script src="ajax.js"></script>
+<script>
+	var ss=location.href
+	var num=ss.split("?")
+	console.log(num)
+//从str a b c z json中拿到数据	
+if(num[2]){
+	console.log(1)
+		if(num[2].split("/")[1][0]=="d"){
+			ajax("get","stra.json","",function(obj){
+		var ss=location.href
+		var num=ss.split("?")
+		var str="";
+		var box10=document.getElementById("box10")
+		for(var i=0;i<obj.length;i++){
+			if(num[1]==obj[i].id){
+				str='<div id="box10-c"><a href="ss.html">首页</a>><a href="##">'+obj[i].lei+'</a>><a href="##">'+obj[i].name+'</a></div><div id="box10-a"><div><img src='+obj[i].img+'></div><p><img src='+obj[i].img+'></p><p><img src='+obj[i].img+'></p><p><img src='+obj[i].img+'></p><p><img src='+obj[i].img+'></p></div><div id="box10-b"><p>'+obj[i].name+'</p><p>'+obj[i].name+'</p><p><span>果园价</span><span>'+obj[i].money+'</span></p><p><span>规格</span><span>'+obj[i].num+'</span></p><div id="but"><span>数量</span><button>-</button><input type="text" value="1"><button>+</button></div><span><a href="##">立即购买</a><a href="##">加入购物车</a></span></div>'
+			}
+		}
+		box10.innerHTML=str
+var box10a=document.querySelectorAll("#box10-c>a")
+box10a[1].onclick = function(){
+	if(box10a[1].innerHTML=="新鲜水果"){
+	location.href="shuigou.html"
+}
+if(box10a[1].innerHTML=="全部生鲜"){
+	location.href="shengxian.html"
+}
+}
+//商品加减
+var but=document.getElementById("but")
+var jia=but.lastElementChild
+var jian=but.firstElementChild.nextElementSibling
+jia.onclick = function(){
+	var num=parseInt(jia.previousElementSibling.value)
+	num++
+	jia.previousElementSibling.value=num
+}
+jian.onclick = function(){
+	var num=parseInt(jian.nextElementSibling.value)
+	num--
+	if(num<=1){
+		num=1
+	}
+	jian.nextElementSibling.value=num
+}
+//购物车功能立即购买
+var shop=document.querySelectorAll("#box10-b>span>a")
+shop[0].onclick = function(){
+	var val=shop[0].parentNode.previousElementSibling.lastElementChild.previousElementSibling.value
+	location.href="gouwu.html?"+num[1]+"?"+val+"?"+num[2].split("/")[1][0]
+}
+//购物车功能加入购物车
+var n=1
+var obj1={}
+shop[1].onclick = function(){
+	ts.style.display="block"
+		if(!obj1[num[2].split("/")[1][0]]){
+			obj1[num[2].split("/")[1][0]]=n;
+			setCookie(num[1]+"d",JSON.stringify(obj1),7)
+		}else{
+			var n2 = obj1[num[2].split("/")[1][0]];
+			n2++;
+			obj1[num[2].split("/")[1][0]] = n2;
+			//cookie  字符串   
+			//obj1  对象
+			//如何将对象转换为字符串  JSON.stringify()
+			//如果将字符串转换为对象  JSON.parse() setCookie(_name,_val,expires)
+			// setCookie('init',JSON.stringify(obj1),7)
+			console.log(obj1)
+			setCookie(num[1]+"d",JSON.stringify(obj1),7)
+		}
+	
+}
+
+function setCookie(_name,_val,expires){
+	var d = new Date();
+	d.setDate(d.getDate()+expires);
+	document.cookie = _name+'='+_val+';path=/;expires='+d;
+}
+
+})
+}
+if(num[2].split("/")[1][0]=="e"){
+			ajax("get","strb.json","",function(obj){
+		var ss=location.href
+		var num=ss.split("?")
+		var str="";
+		var box10=document.getElementById("box10")
+		for(var i=0;i<obj.length;i++){
+			if(num[1]==obj[i].id){
+				str='<div id="box10-c"><a href="ss.html">首页</a>><a href="##">'+obj[i].lei+'</a>><a href="##">'+obj[i].name+'</a></div><div id="box10-a"><div><img src='+obj[i].img+'></div><p><img src='+obj[i].img+'></p><p><img src='+obj[i].img+'></p><p><img src='+obj[i].img+'></p><p><img src='+obj[i].img+'></p></div><div id="box10-b"><p>'+obj[i].name+'</p><p>'+obj[i].name+'</p><p><span>果园价</span><span>'+obj[i].money+'</span></p><p><span>规格</span><span>'+obj[i].num+'</span></p><div id="but"><span>数量</span><button>-</button><input type="text" value="1"><button>+</button></div><span><a href="##">立即购买</a><a href="##">加入购物车</a></span></div>'
+			}
+		}
+		box10.innerHTML=str
+var box10a=document.querySelectorAll("#box10-c>a")
+box10a[1].onclick = function(){
+	if(box10a[1].innerHTML=="新鲜水果"){
+	location.href="shuigou.html"
+}
+if(box10a[1].innerHTML=="全部生鲜"){
+	location.href="shengxian.html"
+}
+}
+//商品加减
+var but=document.getElementById("but")
+var jia=but.lastElementChild
+var jian=but.firstElementChild.nextElementSibling
+jia.onclick = function(){
+	var num=parseInt(jia.previousElementSibling.value)
+	num++
+	jia.previousElementSibling.value=num
+}
+jian.onclick = function(){
+	var num=parseInt(jian.nextElementSibling.value)
+	num--
+	if(num<=1){
+		num=1
+	}
+	jian.nextElementSibling.value=num
+}
+//购物车功能立即购买
+var shop=document.querySelectorAll("#box10-b>span>a")
+shop[0].onclick = function(){
+	var val=shop[0].parentNode.previousElementSibling.lastElementChild.previousElementSibling.value
+	location.href="gouwu.html?"+num[1]+"?"+val+"?"+num[2].split("/")[1][0]
+}
+//购物车功能加入购物车
+var n=1
+var obj1={}
+shop[1].onclick = function(){
+	ts.style.display="block"
+		if(!obj1[num[2].split("/")[1][0]]){
+			obj1[num[2].split("/")[1][0]]=n;
+			setCookie(num[1]+"e",JSON.stringify(obj1),7)
+		}else{
+			var n2 = obj1[num[2].split("/")[1][0]];
+			n2++;
+			obj1[num[2]+"e".split("/")[1][0]] = n2;
+			//cookie  字符串   
+			//obj1  对象
+			//如何将对象转换为字符串  JSON.stringify()
+			//如果将字符串转换为对象  JSON.parse() setCookie(_name,_val,expires)
+			// setCookie('init',JSON.stringify(obj1),7)
+			console.log(obj1)
+			setCookie(num[1],JSON.stringify(obj1),7)
+		}
+}
+
+function setCookie(_name,_val,expires){
+	var d = new Date();
+	d.setDate(d.getDate()+expires);
+	document.cookie = _name+'='+_val+';path=/;expires='+d;
+}
+
+
+})
+}	
+
+if(num[2].split("/")[1][0]=="f"){
+			ajax("get","strc.json","",function(obj){
+		var ss=location.href
+		var num=ss.split("?")
+		var str="";
+		var box10=document.getElementById("box10")
+		for(var i=0;i<obj.length;i++){
+			if(num[1]==obj[i].id){
+				str='<div id="box10-c"><a href="ss.html">首页</a>><a href="##">'+obj[i].lei+'</a>><a href="##">'+obj[i].name+'</a></div><div id="box10-a"><div><img src='+obj[i].img+'></div><p><img src='+obj[i].img+'></p><p><img src='+obj[i].img+'></p><p><img src='+obj[i].img+'></p><p><img src='+obj[i].img+'></p></div><div id="box10-b"><p>'+obj[i].name+'</p><p>'+obj[i].name+'</p><p><span>果园价</span><span>'+obj[i].money+'</span></p><p><span>规格</span><span>'+obj[i].num+'</span></p><div id="but"><span>数量</span><button>-</button><input type="text" value="1"><button>+</button></div><span><a href="##">立即购买</a><a href="##">加入购物车</a></span></div>'
+			
+			}
+		}
+			box10.innerHTML=str
+var box10a=document.querySelectorAll("#box10-c>a")
+console.log()
+box10a[1].onclick = function(){
+	if(box10a[1].innerHTML=="新鲜水果"){
+	location.href="shuigou.html"
+}
+if(box10a[1].innerHTML=="全部生鲜"){
+	location.href="shengxian.html"
+}
+}
+//商品加减
+var but=document.getElementById("but")
+var jia=but.lastElementChild
+var jian=but.firstElementChild.nextElementSibling
+var mss=ts.firstElementChild.firstElementChild.firstElementChild
+mss.onclick = function(){
+			ts.style.display="none"
+		}
+
+jia.onclick = function(){
+	var num=parseInt(jia.previousElementSibling.value)
+	num++
+	jia.previousElementSibling.value=num
+}
+jian.onclick = function(){
+	var num=parseInt(jian.nextElementSibling.value)
+	num--
+	if(num<=1){
+		num=1
+	}
+	jian.nextElementSibling.value=num
+}
+//购物车功能立即购买
+var shop=document.querySelectorAll("#box10-b>span>a")
+shop[0].onclick = function(){
+	var val=shop[0].parentNode.previousElementSibling.lastElementChild.previousElementSibling.value
+	location.href="gouwu.html?"+num[1]+"?"+val+"?"+num[2].split("/")[1][0]
+}
+
+//购物车功能加入购物车
+var n=1
+var obj1={}
+shop[1].onclick = function(){
+	ts.style.display="block"
+		if(!obj1[num[2].split("/")[1][0]]){
+			obj1[num[2].split("/")[1][0]]=n;
+			setCookie(num[1]+"f",JSON.stringify(obj1),7)
+		}else{
+			var n2 = obj1[num[2].split("/")[1][0]];
+			n2++;
+			obj1[num[2].split("/")[1][0]] = n2;
+			//cookie  字符串   
+			//obj1  对象
+			//如何将对象转换为字符串  JSON.stringify()
+			//如果将字符串转换为对象  JSON.parse() setCookie(_name,_val,expires)
+			// setCookie('init',JSON.stringify(obj1),7)
+			console.log(obj1)
+			setCookie(num[1]+"f",JSON.stringify(obj1),7)
+		}
+}
+
+function setCookie(_name,_val,expires){
+	var d = new Date();
+	d.setDate(d.getDate()+expires);
+	document.cookie = _name+'='+_val+';path=/;expires='+d;
+}
+		
+})
+}
+
+if(num[2].split("/")[1][0]=="g"){
+			ajax("get","strd.json","",function(obj){
+		var ss=location.href
+		var num=ss.split("?")
+		var str="";
+		var box10=document.getElementById("box10")
+		for(var i=0;i<obj.length;i++){
+			if(num[1]==obj[i].id){
+				str='<div id="box10-c"><a href="ss.html">首页</a>><a href="##">'+obj[i].lei+'</a>><a href="##">'+obj[i].name+'</a></div><div id="box10-a"><div><img src='+obj[i].img+'></div><p><img src='+obj[i].img+'></p><p><img src='+obj[i].img+'></p><p><img src='+obj[i].img+'></p><p><img src='+obj[i].img+'></p></div><div id="box10-b"><p>'+obj[i].name+'</p><p>'+obj[i].name+'</p><p><span>果园价</span><span>'+obj[i].money+'</span></p><p><span>规格</span><span>'+obj[i].num+'</span></p><div id="but"><span>数量</span><button>-</button><input type="text" value="1"><button>+</button></div><span><a href="##">立即购买</a><a href="##">加入购物车</a></span></div>'
+			}
+		}
+		box10.innerHTML=str
+var box10a=document.querySelectorAll("#box10-c>a")
+console.log()
+box10a[1].onclick = function(){
+	if(box10a[1].innerHTML=="新鲜水果"){
+	location.href="shuigou.html"
+}
+if(box10a[1].innerHTML=="全部生鲜"){
+	location.href="shengxian.html"
+}
+}
+//商品加减
+var but=document.getElementById("but")
+var jia=but.lastElementChild
+var jian=but.firstElementChild.nextElementSibling
+var mss=ts.firstElementChild.firstElementChild.firstElementChild
+mss.onclick = function(){
+			ts.style.display="none"
+		}
+
+jia.onclick = function(){
+	var num=parseInt(jia.previousElementSibling.value)
+	num++
+	jia.previousElementSibling.value=num
+}
+jian.onclick = function(){
+	var num=parseInt(jian.nextElementSibling.value)
+	num--
+	if(num<=1){
+		num=1
+	}
+	jian.nextElementSibling.value=num
+}
+//购物车功能立即购买
+var shop=document.querySelectorAll("#box10-b>span>a")
+shop[0].onclick = function(){
+	var val=shop[0].parentNode.previousElementSibling.lastElementChild.previousElementSibling.value
+	location.href="gouwu.html?"+num[1]+"?"+val+"?"+num[2].split("/")[1][0]
+}
+//购物车功能加入购物车
+var n=1
+var obj1={}
+
+shop[1].onclick = function(){
+	ts.style.display="block"
+		if(!obj1[num[2].split("/")[1][0]]){
+			obj1[num[2].split("/")[1][0]]=n;
+			setCookie(num[1]+"g",JSON.stringify(obj1),7)
+		}else{
+			var n2 = obj1[num[2].split("/")[1][0]];
+			n2++;
+			obj1[num[2]+"g".split("/")[1][0]] = n2;
+			//cookie  字符串   
+			//obj1  对象
+			//如何将对象转换为字符串  JSON.stringify()
+			//如果将字符串转换为对象  JSON.parse() setCookie(_name,_val,expires)
+			// setCookie('init',JSON.stringify(obj1),7)
+			console.log(obj1)
+			setCookie(num[1],JSON.stringify(obj1),7)
+		}
+}
+
+function setCookie(_name,_val,expires){
+	var d = new Date();
+	d.setDate(d.getDate()+expires);
+	document.cookie = _name+'='+_val+';path=/;expires='+d;
+}
+
+
+})
+}//搜索时ste json 内拿到数据	
+} else{
+	console.log(2)
+	ajax("get","ste.json","",function(obj){
+		var ss=location.href
+		var num=ss.split("?")
+		var str="";
+		var box10=document.getElementById("box10")
+		for(var i=0;i<obj.length;i++){
+			if(parseInt(num[1])==parseInt(obj[i].id)){
+				str='<div id="box10-c"><a href="ss.html">首页</a>><a href="##">'+obj[i].lei+'</a>><a href="##">'+obj[i].name+'</a></div><div id="box10-a"><div><img src='+obj[i].img+'></div><p><img src='+obj[i].img+'></p><p><img src='+obj[i].img+'></p><p><img src='+obj[i].img+'></p><p><img src='+obj[i].img+'></p></div><div id="box10-b"><p>'+obj[i].name+'</p><p>'+obj[i].name+'</p><p><span>果园价</span><span>'+obj[i].money+'</span></p><p><span>规格</span><span>'+obj[i].num+'</span></p><div id="but"><span>数量</span><button>-</button><input type="text" value="1"><button>+</button></div><span><a href="##">立即购买</a><a href="##">加入购物车</a></span></div>'
+				box10.innerHTML=str	
+				console.log(box10)
+			}
+		}
+	
+var box10a=document.querySelectorAll("#box10-c>a")
+box10a[1].onclick = function(){
+	if(box10a[1].innerHTML=="新鲜水果"){
+	location.href="shuigou.html"
+	}
+	if(box10a[1].innerHTML=="全部生鲜"){
+	location.href="shengxian.html"
+	}
+}
+//商品加减
+var but=document.getElementById("but")
+var jia=but.lastElementChild
+var jian=but.firstElementChild.nextElementSibling
+jia.onclick = function(){
+	var num=parseInt(jia.previousElementSibling.value)
+	num++
+	jia.previousElementSibling.value=num
+}
+jian.onclick = function(){
+	var num=parseInt(jian.nextElementSibling.value)
+	num--
+	if(num<=1){
+		num=1
+	}
+	jian.nextElementSibling.value=num
+}
+//购物车功能立即购买
+var shop=document.querySelectorAll("#box10-b>span>a")
+shop[0].onclick = function(){
+	var val=shop[0].parentNode.previousElementSibling.lastElementChild.previousElementSibling.value
+	location.href="gouwu.html?"+num[1]+"?"+val
+}
+var n=1
+var obja={}
+shop[1].onclick = function(){
+	ts.style.display="block"
+		if(!obja[num[1]]){
+			obja[num[1]]=n;
+			setCookie(num[1],JSON.stringify(obja),7)
+		 }
+		else{
+			var n2 = obja[num[1]];
+			n2++;
+			obja[num[1]] = n2;
+			//cookie  字符串   
+			//obj1  对象
+			//如何将对象转换为字符串  JSON.stringify()
+			//如果将字符串转换为对象  JSON.parse() setCookie(_name,_val,expires)
+			// setCookie('init',JSON.stringify(obj1),7)
+			console.log(obja)
+			setCookie(num[1],JSON.stringify(obja),7)
+		}
+}
+function setCookie(_name,_val,expires){
+	var d = new Date();
+	d.setDate(d.getDate()+expires);
+	document.cookie = _name+'='+_val+';path=/;expires='+d;
+}
+
+
+})
+}
+//input搜索功能
+var aa=document.querySelector(".box2-b>a")
+var inp=document.querySelector(".box2-b>input")
+aa.onclick = function(){
+	var connt=document.getElementById("connt")
+	var val=inp.value
+	var num=[]
+	ajax("get","ste.json","",function(obj){
+		var str=[]
+		var a=0
+		for(var i=0;i<obj.length;i++){
+			if((obj[i].name.indexOf(val)!=-1)||(obj[i].cli.indexOf(val)!=-1)||(obj[i].cd.indexOf(val)!=-1)||(obj[i].lei.indexOf(val)!=-1)){
+				num.push(obj[i].id)
+				location.href="sou.html?"+num
+			
+			}else{
+				a++
+				if(a==obj.length){
+					location.href="sou.html?"
+				}
+			}
+		}
+	})
+
+}
+var ts=document.getElementById("ts")
+var msn=ts.firstElementChild.lastElementChild.previousElementSibling
+var mss=ts.firstElementChild.firstElementChild.firstElementChild
+mss.onclick = function(){
+			ts.style.display="none"
+		}
+
+window.onscroll = function(){
+	var scrolltop=document.body.scrollTop||document.documentElement.scrollTop
+	ts.style.top=scrolltop+"px"
+}
+msn.onclick = function(){
+	ts.style.display="none"
+}
+</script>

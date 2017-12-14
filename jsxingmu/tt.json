@@ -1,0 +1,307 @@
+
+var str=[
+{
+	"img":"images/d1.jpg",
+	"name":"团聚礼盒",
+	"money":"￥358.00",
+	"num":"/礼篮"
+},
+{
+	"img":"images/d2.jpg",
+	"name":"欢乐时光水果礼篮",
+	"money":"￥188.00",
+	"num":"/1份"
+},
+{
+	"img":"images/d3.jpg",
+	"name":"心想事成礼盒",
+	"money":"￥218.00",
+	"num":"/礼盒"
+},
+{
+	"img":"images/d4.jpg",
+	"name":"大个佳沛新西兰绿奇异果礼盒",
+	"money":"￥88.00",
+	"num":"/16个"
+},
+{
+	"img":"images/d5.jpg",
+	"name":"低糖礼盒",
+	"money":"￥218.00",
+	"num":"/一盒"
+},
+{
+	"img":"images/d6.jpg",
+	"name":"明月千里礼盒A款（含月饼）",
+	"money":"￥218.00",
+	"num":"/一盒"
+},
+{
+	"img":"images/d7.jpg",
+	"name":"月满乾坤礼盒A款（含月饼）",
+	"money":"￥268.00",
+	"num":"/一盒"
+},
+{
+	"img":"images/d8.jpg",
+	"name":"与众不同礼盒",
+	"money":"￥288.00",
+	"num":"/一盒"
+},
+{
+	"img":"images/d9.jpg",
+	"name":"心想事成礼盒",
+	"money":"￥218.00",
+	"num":"/礼篮"
+},
+{
+	"img":"images/d10.jpg",
+	"name":"天天果园100元充值卡",
+	"money":"￥100.00",
+	"num":"/一张"
+},
+{
+	"img":"images/d11.jpg",
+	"name":"天天果园200元充值卡",
+	"money":"￥200.00",
+	"num":"/一张"
+},
+{
+	"img":"images/d12.jpg",
+	"name":"心想事成礼盒",
+	"money":"￥300.00",
+	"num":"/一张"
+},
+{
+	"img":"images/d13.jpg",
+	"name":"心想事成礼盒",
+	"money":"￥500.00",
+	"num":"/一张"
+},
+{
+	"img":"images/d14.jpg",
+	"name":"心想事成礼盒",
+	"money":"￥1000.00",
+	"num":"/礼篮"
+},
+]
+
+var str1=[
+{
+	"img":"images/e1.jpg",
+	"name":"美国红安琪",
+	"money":"￥69.80",
+	"num":"/8个"
+},
+{
+	"img":"images/e2.jpg",
+	"name":"慕斯蜜木瓜（无籽）（礼盒装）",
+	"money":"￥29.90",
+	"num":"/1个"
+},
+{
+	"img":"images/e3.jpg",
+	"name":"脆皮金桔",
+	"money":"￥58.00",
+	"num":"/4斤"
+},
+{
+	"img":"images/e4.jpg",
+	"name":"云南夏黑葡萄",
+	"money":"￥58.00",
+	"num":"/4斤"
+},
+{
+	"img":"images/e5.jpg",
+	"name":"澳大利亚高糖度脐橙",
+	"money":"￥88.00",
+	"num":"/12个"
+},
+{
+	"img":"images/e6.jpg",
+	"name":"桂林金桔",
+	"money":"￥45.80",
+	"num":"/4斤"
+},
+{
+	"img":"images/e7.jpg",
+	"name":"新疆阿克苏冰糖心苹果",
+	"money":"￥49.00",
+	"num":"/5斤"
+},
+{
+	"img":"images/e8.jpg",
+	"name":"进口帝皇香蕉",
+	"money":"￥29.80",
+	"num":"/2斤"
+},
+{
+	"img":"images/e9.jpg",
+	"name":"白露梨",
+	"money":"￥58.00",
+	"num":"/4斤"
+},
+{
+	"img":"images/e10.jpg",
+	"name":"优选佳沛新西兰绿奇异果(原箱)",
+	"money":"￥128.00",
+	"num":"/33个"
+},
+]
+
+var str2=[
+{
+	"img":"images/f1.jpg",
+	"name":"嫩脆晓蜜瓜",
+	"money":"￥45.80",
+	"num":"/1个"
+},
+{
+	"img":"images/f2.jpg",
+	"name":"涌泉无籽蜜桔",
+	"money":"￥53.80",
+	"num":"/5斤"
+},
+{
+	"img":"images/f3.jpg",
+	"name":"海南金凤凰蜜瓜",
+	"money":"￥29.80",
+	"num":"/1个"
+},
+{
+	"img":"images/f4.jpg",
+	"name":"美国华盛顿甜脆红地厘蛇果",
+	"money":"￥39.90",
+	"num":"/6个"
+},
+{
+	"img":"images/f5.jpg",
+	"name":"新疆阿克苏冰糖心苹果",
+	"money":"￥49.00",
+	"num":"/5斤"
+},
+{
+	"img":"images/f6.jpg",
+	"name":"麒麟西瓜",
+	"money":"￥68.00",
+	"num":"/1个"
+},
+{
+	"img":"images/f7.jpg",
+	"name":"红心蜜柚",
+	"money":"￥45.80",
+	"num":"/1个"
+},
+{
+	"img":"images/f8.jpg",
+	"name":"新疆库尔勒香梨",
+	"money":"￥39.90",
+	"num":"/5斤"
+},
+{
+	"img":"images/f9.jpg",
+	"name":"百香果组合",
+	"money":"￥19.90",
+	"num":"/精选"
+},
+{
+	"img":"images/f10.jpg",
+	"name":"优选佳沛新西兰阳光金奇异果",
+	"money":"￥88.00",
+	"num":"/12个"
+}
+
+]
+
+var str3=[
+{
+	"img":"images/g1.jpg",
+	"name":"美国特选级安格斯西冷牛排",
+	"money":"￥99.00",
+	"num":"/200g"	
+},
+{
+	"img":"images/g2.jpg",
+	"name":"美国特选级安格斯西冷牛排",
+	"money":"￥99.00",
+	"num":"/200g"	
+},
+{
+	"img":"images/g3.jpg",
+	"name":"澳洲草饲上脑牛排(S级)",
+	"money":"￥19.90",
+	"num":"/200g"	
+},
+{
+	"img":"images/g4.jpg",
+	"name":"越南生冻黑虎虾仁（大）",
+	"money":"￥39.00",
+	"num":"/200g"	
+},
+{
+	"img":"images/g5.jpg",
+	"name":"农家散养鸽子蛋",
+	"money":"￥39.90",
+	"num":"/6枚"	
+},
+{
+	"img":"images/g6.jpg",
+	"name":"鲜活松叶蟹",
+	"money":"￥298.00",
+	"num":"/一只"	
+},
+{
+	"img":"images/g7.jpg",
+	"name":"鲜活蛏子",
+	"money":"￥36.00",
+	"num":"/500g"	
+},
+{
+	"img":"images/g8.jpg",
+	"name":"鲜活龙胆鱼",
+	"money":"￥98.00",
+	"num":"/500g"	
+},
+{
+	"img":"images/g9.jpg",
+	"name":"山林风酱鸭",
+	"money":"￥15.80",
+	"num":"/400g"	
+},
+{
+	"img":"images/g10.jpg",
+	"name":"美国特选级安格斯西冷牛排",
+	"money":"￥99.00",
+	"num":"/200g"	
+},
+{
+	"img":"images/g11.jpg",
+	"name":"泰森鸡翅根",
+	"money":"￥10.90",
+	"num":"/220g"	
+},
+{
+	"img":"images/g12.jpg",
+	"name":"玛姆鲁克葵花籽油",
+	"money":"￥25.80",
+	"num":"/1L"	
+},
+{
+	"img":"images/g13.jpg",
+	"name":"美国特选级安格斯西冷牛排",
+	"money":"￥99.00",
+	"num":"/200g"	
+},
+{
+	"img":"images/g14.jpg",
+	"name":"养乐多活菌性乳酸菌饮品",
+	"money":"￥11.90",
+	"num":"/100ml*5"	
+},
+{
+	"img":"images/g15.jpg",
+	"name":"明治保加利亚LB81酸奶",
+	"money":"￥21.90",
+	"num":"/400g"	
+},
+]
